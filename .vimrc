@@ -16,7 +16,7 @@ Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'vim-scripts/AutoComplPop.git'
-Bundle 'chriskempson/tomorrow-theme.git' {'rtp': 'vim/'}
+Bundle 'chriskempson/tomorrow-theme.git'
 Bundle 'Lokaltog/vim-powerline.git'
 
 " Basic settings
