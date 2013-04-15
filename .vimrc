@@ -17,6 +17,7 @@ Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'vim-scripts/AutoComplPop.git'
 Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'terryma/vim-multiple-cursors.git'
 
 " Basic settings
 syntax on                     " Syntax highlighing
