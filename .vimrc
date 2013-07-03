@@ -15,9 +15,11 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
-Bundle 'vim-scripts/AutoComplPop.git'
 Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'terryma/vim-multiple-cursors.git'
+
+" Github full repos
+Bundle 'git@github.com:davidhalter/jedi-vim.git'
+Bundle 'git@github.com:ervandew/supertab.git'
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -119,7 +121,7 @@ map <c-h> <c-w>h
 map <leader>n :NERDTreeToggle<CR>
 
 " Powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
