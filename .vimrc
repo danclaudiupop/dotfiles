@@ -39,8 +39,8 @@ colorscheme Tomorrow-Night-Eighties
 set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~
 
 " Insert completion - don't select first item, follow typing in autocomplete
-set completeopt=menuone,longest,preview
-set pumheight=6             " Keep a small completion window
+" set completeopt=menuone,longest,preview
+set pumheight=10            " Keep a small completion window
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8
@@ -120,13 +120,14 @@ map <c-h> <c-w>h
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
+" Jedi-Vim
+let g:jedi#related_names_command = "<leader>r"
+
+" SuperTab navigate from top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 " Powerline
 "let g:Powerline_symbols = 'fancy'
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
-
-" Python
-au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
