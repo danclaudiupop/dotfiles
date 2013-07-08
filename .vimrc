@@ -15,11 +15,14 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
-Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'ervandew/supertab'
+Bundle 'davidhalter/jedi-vim'
 
 " Github full repos
-Bundle 'git@github.com:davidhalter/jedi-vim.git'
-Bundle 'git@github.com:ervandew/supertab.git'
+"Bundle 'git@github.com:davidhalter/jedi-vim.git'
+"Bundle 'git@github.com:ervandew/supertab.git'
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -127,7 +130,15 @@ let g:jedi#related_names_command = "<leader>r"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Powerline
-"let g:Powerline_symbols = 'fancy'
+let g:airline_theme='simple'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_fugitive_prefix = ' '
+let g:airline_readonly_symbol = ''
+let g:airline_linecolumn_prefix = ' '
+
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
