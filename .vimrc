@@ -20,10 +20,6 @@ Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
 
-" Github full repos
-"Bundle 'git@github.com:davidhalter/jedi-vim.git'
-"Bundle 'git@github.com:ervandew/supertab.git'
-
 " Basic settings
 syntax on                     " Syntax highlighing
 filetype on                   " Try to detect filetypes
