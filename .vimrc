@@ -18,7 +18,7 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
-Bundle 'davidhalter/jedi-vim'
+Bundle 'junegunn/seoul256.vim'
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -32,7 +32,8 @@ set title                     " Show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 
-colorscheme Tomorrow-Night-Eighties
+let g:seoul256_background = 235
+colorscheme seoul256
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~
@@ -128,8 +129,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " Powerline
 let g:airline_theme='simple'
 let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_fugitive_prefix = ' '
 let g:airline_readonly_symbol = ''
