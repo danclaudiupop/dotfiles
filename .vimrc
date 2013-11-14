@@ -18,7 +18,6 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
-Bundle 'junegunn/seoul256.vim'
 
 " Basic settings
 syntax on                     " Syntax highlighing
