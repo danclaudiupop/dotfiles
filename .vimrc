@@ -17,6 +17,9 @@ Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
+Bundle 'ervandew/supertab'
+Bundle 'zeis/vim-kolor'
+
 
 " Basic settings
 syntax on                     " Syntax highlighing
