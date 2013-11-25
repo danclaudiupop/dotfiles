@@ -18,8 +18,11 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
+Bundle 'Tagbar'
+Bundle 'fisadev/vim-isort'
 Bundle 'zeis/vim-kolor'
 
+colorscheme kolor
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -133,6 +136,9 @@ let g:airline_right_alt_sep = ''
 let g:airline_fugitive_prefix = ' '
 let g:airline_readonly_symbol = ''
 let g:airline_linecolumn_prefix = ' '
+let g:airline#extensions#tabline#enabled = 1
+
+nmap <F8> :TagbarToggle<CR>
 
 
 " Remove trailing whitespace on <leader>S
