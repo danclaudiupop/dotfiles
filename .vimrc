@@ -121,9 +121,6 @@ map <c-h> <c-w>h
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Jedi-Vim
-let g:jedi#related_names_command = "<leader>r"
-
 " SuperTab navigate from top to bottom
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
@@ -136,10 +133,8 @@ let g:airline_right_alt_sep = ''
 let g:airline_fugitive_prefix = ' '
 let g:airline_readonly_symbol = ''
 let g:airline_linecolumn_prefix = ' '
-let g:airline#extensions#tabline#enabled = 1
 
 nmap <F8> :TagbarToggle<CR>
-
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
