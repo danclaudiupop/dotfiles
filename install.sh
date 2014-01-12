@@ -15,10 +15,6 @@ if [ -d ~/.dotfiles ]; then
     git pull origin master
     cd ~/.dotfiles
     git pull origin master
-
-    sudo pip install pip --upgrade
-    sudo pip install flake8 --upgrade
-    vim -u ~/.dotfiles/.vimrc - +BundleInstall! +BundleClean! +qall
 else
     git clone https://github.com/danclaudiupop/dotfiles.git ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
@@ -28,9 +24,4 @@ else
     do
         link_file $f
     done
-
-    sudo apt-get -y install python-pip
-    sudo pip install pip --upgrade
-    sudo pip install flake8 --upgrade
-    vim -u ~/.dotfiles/.vimrc - +BundleInstall +qall
 fi

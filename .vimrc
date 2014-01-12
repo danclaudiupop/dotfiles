@@ -14,15 +14,15 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
-Bundle 'Raimondi/delimitMate.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
-Bundle 'Tagbar'
 Bundle 'fisadev/vim-isort'
-Bundle 'zeis/vim-kolor'
+Bundle 'luochen1990/rainbow'
+Bundle 'w0ng/vim-hybrid'
+Bundle 'edkolev/tmuxline.vim'
 
-colorscheme kolor
+colorscheme hybrid
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -125,16 +125,11 @@ map <leader>n :NERDTreeToggle<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Powerline
-let g:airline_theme='simple'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_fugitive_prefix = ' '
-let g:airline_readonly_symbol = ''
-let g:airline_linecolumn_prefix = ' '
-
-nmap <F8> :TagbarToggle<CR>
+let g:airline_theme='base16'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
+
+let g:rainbow_active = 1
