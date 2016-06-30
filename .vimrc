@@ -15,14 +15,16 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'ervandew/supertab'
-Bundle 'fisadev/vim-isort'
 Bundle 'luochen1990/rainbow'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'edkolev/tmuxline.vim'
+Bundle 'morhetz/gruvbox'
+Bundle 'mhinz/vim-startify'
+Bundle 'mhinz/vim-signify'
 
-colorscheme hybrid
+
+colorscheme gruvbox
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -125,11 +127,23 @@ map <leader>n :NERDTreeToggle<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Powerline
-let g:airline_theme='base16'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
 
 let g:rainbow_active = 1
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+let g:signify_vcs_list = ['git']
+
+" pdb mappings
+nnoremap <leader>p oimport pdb; pdb.set_trace()<esc>
+nnoremap <leader>P Oimport pdb; pdb.set_trace()<esc>
+
+" Build ctags
+set tags=tags
+noremap <leader>t :!ctags -R --fields=+l --languages=python --python-kinds=-iv -f ./tags $(python -c "import os, sys; print(' '.join('{}'.format(d) for d in sys.path if os.path.isdir(d)))")<cr>
