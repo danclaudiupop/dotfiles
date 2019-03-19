@@ -1,27 +1,27 @@
 #!/bin/bash
-function link_file {
-    source="${PWD}/$1"
-    target="${HOME}/$1"
-
-    if [ -e "${target}" ]; then
-        mv $target $target.bak
+function linkwork()
+{
+    linkTocheck="$1"
+    sourceLink="$2"
+    if [ -f "$linkTocheck" ]; then
+        echo "$linkTocheck is a file - backing it up"
+        mv "$linkTocheck" "$sourceLink.bak"  
     fi
-
-    ln -sf ${source} ${target}
+    if [ ! -h "$linkTocheck" ]; then
+        ln -s "$sourceLink" "$linkTocheck"
+        echo "$linkTocheck created"
+    fi
 }
 
-if [ -d ~/.dotfiles ]; then
-    cd ~/.dotfiles/.vim/bundle/vundle/
-    git pull origin master
-    cd ~/.dotfiles
-    git pull origin master
-else
-    git clone https://github.com/danclaudiupop/dotfiles.git ~/.dotfiles
-    git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
-    cd ~/.dotfiles
+if [ "Linux" = "$(uname -a | awk '{printf $1}')" ]
+then
+    linkwork "/$(whoami)"/.tmux.conf /home/"$(whoami)"/.tmux.conf
+    linkwork "/$(whoami)"/.config/nvim/init.vim /home/"$(whoami)"/.config/nvim/init.vim
+fi
 
-    for f in .vim .vimrc .tmux.conf .gitconfig .battery
-    do
-        link_file $f
-    done
+
+if [ "Mac" = "$(sw_vers|grep ProductName |awk '{printf $2}')" ]
+then
+    linkwork "/Users/$(whoami)/.tmux.conf" "$(pwd)"/.tmux.conf 
+    linkwork "/Users/$(whoami)/.config/nvim/init.vim" "$(pwd)"/.config/nvim/init.vim
 fi
