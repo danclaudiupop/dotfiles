@@ -23,5 +23,5 @@ fi
 if [ "Mac" = "$(sw_vers|grep ProductName |awk '{printf $2}')" ]
 then
     linkwork "/Users/$(whoami)/.tmux.conf" "$(pwd)"/.tmux.conf 
-    linkwork "/Users/$(whoami)/.config/nvim/init.vim" "$(pwd)"/.config/nvim/init.vim
+    linkwork "/Users/$(whoami)/.config/nvim/init.vim" "$(pwd)"/init.vim
 fi
