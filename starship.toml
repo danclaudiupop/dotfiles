@@ -1,0 +1,15 @@
+[character]                        
+success_symbol = "[❯](bold white)"
+
+[directory]
+style = "blue"
+
+[git_branch]
+style = "white"
+
+[cmd_duration]
+style = "dimmed white"
+
+[python]
+style = "dimmed white"
+symbol = ""
